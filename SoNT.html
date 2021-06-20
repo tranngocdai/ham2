@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function songuyento(a){
+    if (a>=2){
+      let check = true;
+      for (let i = 2; i < a; i++) {
+        if (a%i==0){check = false}
+      }return check;
+    } else {return false;}
+  }
+  let daysonguyento='';
+  for (let i = 0; i <1000; i++) {
+    if (songuyento(i)){
+      daysonguyento+=i+"; ";
+    }
+  }
+  document.write(daysonguyento);
+</script>
+</body>
+</html>

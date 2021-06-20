@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="newProduct"><button onclick="addNewP()">Add</button>
+<table border="1px">
+    <tr>
+        <td>Ten sp</td>
+        <td>thao tac</td>
+    </tr>
+    <tbody id="sp">
+    <tr>
+        <td>SP1</td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+<button onclick="showAll()">hien thi ds</button>
+<script>
+    let sp = ["SP1", "SP2", "SP3"];
+    function showAll()
+    {
+        let content = "";
+        for (let i = 0; i < sp.length; i++) {
+            content+="    <tr>" +
+                "        <td>"+sp[i]+"</td>" +
+                "        <td><button onclick='deleteByIndex("+i+")'>Xoa</button>" +
+                "<button onclick='updateById("+i+")'>Sua</button></td>" +
+                "    </tr>"
+        }
+        document.getElementById("sp").innerHTML = content;
+    }
+    function addNewP(){
+        //lay du lieu tu o input
+        let newP = document.getElementById("newProduct").value;
+        // them moi vao mang
+        sp.push(newP);
+        // in lại mang
+        showAll();
+    }
+    function deleteByIndex(index){
+        sp.splice(index, 1);
+        showAll();
+    }
+    function updateById(index){
+        let newP = prompt("Moi ban nhap thong tin moi", sp[index]);
+        sp[index] = newP;
+        showAll();
+    }
+</script>
+</body>
+</html>
