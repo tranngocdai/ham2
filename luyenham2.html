@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //bai1
+    // function binhphuong(a){
+    //     let b= a*a;
+    //     return b;
+    // }
+    // console.log(binhphuong(5));
+    // console.log(binhphuong(8));
+
+    //bai2
+    // function dientichchunhat(a,b){
+    //     return a*b;
+    // };
+    // function chuvihinhtron (r){
+    //     return 2*3.14*r;
+    // }document.write(dientichchunhat(4,6))
+    // document.write(chuvihinhtron(5));
+
+
+    //bai3 Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+
+    // function tinhgiaithua(n){
+    //   let giaithua=n;
+    //   for(i=n-1;i>=1;i--){
+    //     giaithua*=i;
+    //   }return giaithua;
+    // }
+    // console.log(tinhgiathua(4));
+    // function tinhgiaithua(n){
+    //     if (n==2){
+    //         return 2;
+    //     }else {
+    //         return n * tinhgiaithua(n - 1);
+    //     }
+    // }
+    // document.write(tinhgiaithua(6));
+
+    //bài 4 kiểm tra xem ký tự nhập vào có phải là ký tự số không.
+    // Nếu là ký tự số hàm trả về true, ngược lại trả về false.
+
+    function kytuso(a){
+        let bangso="0123456789";
+        let check=false;
+        for (let i = 0; i < 10; i++) {
+            if (a==bangso[i]){
+                check=true;
+            }
+        }
+        return check;
+    }
+
+    //Bài 5 Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+
+    function timMin(a,b,c) {
+        let min;
+        if (a < b && a < c) {
+            min = a;
+        } else if (b < c) {
+            min = b;
+        } else {
+            min = c;
+        }
+        return min;
+    }
+
+    //bài 6
+    function testSoNguyen(a){
+        let check = false;
+        if (a>0&& a == parseInt(a)){
+            check= true;
+        } return check;
+    }
+
+    //bài 7
+    // <body>
+    // <script>
+    //     function doicho(a,b){
+    //     let c=a;
+    //     a=b;
+    //     b=c;
+    // }
+
+    //bài 8
+    //     <script>
+    //         let mang=[];
+    //         function addSoBatKy(a){
+    //         mang.push(a);
+    //         return mang.reverse();
+    //     }
+    //
+        //bài 9
+            function soLanXuatHien(a,arr){
+            let check=false;
+            for (let i = 0; i < arr.length; i++) {
+            if (a==arr[i]){
+            dem+=1;
+            check=true;
+        }
+        } if (check){
+            return dem;
+        } else {
+            return -1;
+        }
+        }
+</script>
+</body>
+</html>
